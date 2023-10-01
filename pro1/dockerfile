@@ -1,0 +1,13 @@
+# Use an official Nginx runtime as a parent image
+FROM nginx:latest
+
+# Set the working directory in the container
+WORKDIR /usr/share/nginx/html
+
+# Copy the content of the local 'html' directory to the working directory in the container
+COPY . .
+
+EXPOSE 83
+
+# Nginx container exposes port 80, so no need to specify it explicitly
+
